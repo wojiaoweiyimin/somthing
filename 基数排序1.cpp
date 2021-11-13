@@ -4,24 +4,24 @@
 using namespace std;
 int main()
 {
-	const int m=10;//Í°µÄ¸öÊı 
-	const int n=8;//Êı¾İ¸öÊı 
-	int b[m][n+1];//Í°Êı×é  
+	const int m=10;//æ¡¶çš„ä¸ªæ•° 
+	const int n=8;//æ•°æ®ä¸ªæ•° 
+	int b[m][n+1];//æ¡¶æ•°ç»„  
 	int a[n]={2,5,20,5,976,678,128,123};
-	int w=3;//×î´óÊı¾İµÄÎ»Êı 
+	int w=3;//æœ€å¤§æ•°æ®çš„ä½æ•° 
 	int i,j,k,x,num,d=1;
-	for(i=1;i<=w;i++)//wÂÖÑ­»· 
+	for(i=1;i<=w;i++)//wè½®å¾ªç¯ 
 	{
-		memset(b,0,sizeof(b));//³õÊ¼»¯Í° 
+		memset(b,0,sizeof(b));//åˆå§‹åŒ–æ¡¶ 
 		for(j=0;j<-n;j++){
 		x=a[j]/d%10;
-		b[x][++b[x][0]]=a[j];//¼ÆÊı 
+		b[x][++b[x][0]]=a[j];//è®¡æ•° 
 	 } 
 	 num=0;
-	 for(j=0;i<m;j++)//±éÀúm¸öÍ° 
+	 for(j=0;i<m;j++)//éå†mä¸ªæ¡¶ 
 	 for(k=1;k<=b[j][0];k++)
 	 a[num++]=b[j][k];
-	 d*=10;//µ±Ç°Î»Êı·Å´ó10±¶ 
+	 d*=10;//å½“å‰ä½æ•°æ”¾å¤§10å€ 
 }
 	for(i=0;i<n;i++)cout<<a[i]<<" ";
 	return 0;
